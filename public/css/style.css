@@ -1,7 +1,229 @@
 /* Your custom styles */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
+    background-color:  #0e0e0f;
+    scroll-behavior: smooth;
+    transition: ease-in 0.2s;
+    overflow-x: hidden;
+}
+/* WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
 
-    /* Gradient background */
-    background: linear-gradient(
+::-webkit-scrollbar-track {
+    background: #000000; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #EB9A11; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid #000000; /* Adds space around the thumb for better visibility */
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #EB9A11 #000000; /* Thumb and track colors */
+}
+
+.logo-name{
+    color: #eaeaea;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+
+/*top nav*/
+.my-nav{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 5px 10px 5px;
+}
+.my-branding{
+    left: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-list{
+    list-style-type: none;
+    padding: 0; 
+    display: flex;
+    column-gap: 5px;
+    margin: auto;
+    transition: ease-in 0.2s;
+}
+
+.nav-link{
+    color: white;
+    font-size: 16px;
+    transition: ease-in 0.2s;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-link:hover{
+    color: #EB9A11;
+    transition: ease-in 0.2s;
+}
+
+#dropdownMenuButton{
+    cursor: pointer;
+}
+
+.clr-main{
+    color:#EB9A11
+}
+
+.collapse.show {
+    height: auto;
+}
+.mytoggle-btn {
+    display: none;
+}
+
+@media (min-width: 651px) {
+    .collapse {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .nav-list{
+        display: flex !important;
+        transition: ease-in 0.2s;
+    }
+}
+/*Side Nav*/
+@media (max-width: 650px) {
+    .nav-list{
+        display: block;
+        transition: ease-in 0.2s;
+    }
+
+    .my-branding{
+        float: right;
+        position: relative;
+        top: -45px;
+        right: 50px;
+    }
+
+    .brand-img{
+        width: 150px;
+    }
+
+    .mytoggle-btn {
+        display: block;
+        cursor: pointer;
+        background-color: #000000;
+        font-size: 18px;
+    }
+}
+
+
+/*=========End Nav*=========/
+
+/*main-sect*/
+#main-sect{
+    background-image: url('https://t4.ftcdn.net/jpg/03/00/13/51/360_F_300135186_OLvr4cgD5uiiidmPKXh5dtn2we2oWDbl.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+
+.txt-Main{
+    font-weight: bold;
+}
+
+#contact-sect{
+    background-image: url('../img/contact.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#construction-sect{
+    background-image: url('../img/dozer-cat-963f-caterpillar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#digital-sect{
+    background-image: url('../img/tech-laptop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#about-sect{
+    background-image: url('../img/southAfrica.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#privacy-sect{
+    padding: 50px 20px 50px 20px;
+}
+#partners-sect{
+    background-image: url('../img/partners.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#agriculture-sect{
+    background-image: url('../img/farming.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#transport-sect{
+    background-image: url('../img/buspark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+#client-sect{
+    background-image: url('../img/clients.jpg');
+}
+
+.my-sections{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px 50px 20px;
+}
+
+.my-card{
+    background-color: #2626268a;
+}
+
+.footer{
+    background-color: #000000;
+    width: 100%;
+    color: white;
+    padding: 50px 30px 10px 30px;
+}
+
+#backToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button at the right of the page */
+    z-index: 99; /* Make sure it does not overlap */
+    font-size: 18px; /* Increase font size */
+}
+.footer-link{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link:hover{
+    text-decoration: none;
+    transition: ease-in 0.2s;
+    color: #EB9A11;
+}
+
+.foot-list{
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+}

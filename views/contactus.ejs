@@ -1,0 +1,82 @@
+<%- include('layout', { title: 'Lambda - Contact Us' , content:` <section id="contact-sect">
+    <div class="container">
+        <h1><span class="clr-main">GET IN TOUCH</span> <span class="txt-Main text-light"> WITH US</span>
+        </h1>
+        <p class="text-light">
+            Need some assistance or information, dont hesitate to send us an email or message below, or pick up that
+            phone and give us a call.
+        </p>
+        <div class="spacer"></div>
+
+        <a class="btn btn-warning" href="#">
+            <i class="fa fa-instagram"></i> Lambda-Africa
+        </a>
+        <a class="btn btn-warning" href="#">
+            <i class="fa fa-facebook"></i> Lambda-Africa
+        </a>
+
+        <br><br>
+        <div class="card my-card">
+            <div class="card-body text-light">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>CONTACT DETAILS</h4>
+                        <p>Transport | Civil & Construction | Agriculture</p>
+                        <a class="footer-link" href="mailto:info@lambda-africa.co.za">
+                            <i class="fa fa-envelope mr-2"></i> info@lambda-africa.co.za
+                        </a>
+                        <br>
+                        <a class="footer-link" href="tel:+27608696939">
+                            <i class="fa fa-phone mr-2"></i> +27 (0) 60 869-6939
+                        </a>
+                        <hr>
+
+                        <p>Digital Services</p>
+                        <a class="footer-link" href="mailto:digital@lambda-africa.co.za">
+                            <i class="fa fa-envelope mr-2"></i> digital@lambda-africa.co.za
+                        </a>
+                        <br>
+                        <a class="footer-link" href="tel:+27635366403">
+                            <i class="fa fa-phone mr-2"></i> +27 (0) 63 536-6403
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>CONTACT FORM</h4>
+                        <P>Send us a message using the form below</P>
+                        <form>
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control form-control-sm" id="name" name="name"
+                                    placeholder="Name..." required />
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control form-control-sm" id="email" name="email"
+                                    placeholder="example@email.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <select class="form-control form-control-sm" id="subject" name="subject" required >
+                                    <option value="General">General</option>
+                                    <option value="Civil & Construction">Civil & Construction</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Digital Service">Digital Service</option>
+                                    <option value="Transport">Transport</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="3" class="form-control form-control-sm" id="message" name="messgae"
+                                    placeholder="Your message..." required></textarea>
+                            </div>
+                            <button type="button" class="btn btn-warning" onclick="sendEmail()">Send Message <i
+                                    class="fa fa-paper-plane"></i>
+                                </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    `}) %>
