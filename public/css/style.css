@@ -227,3 +227,9 @@ html {
     padding: 0; 
     margin: 0;
 }
+
+.farmImg{
+    box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.716);
+    display: flex;
+    margin: auto;
+}
